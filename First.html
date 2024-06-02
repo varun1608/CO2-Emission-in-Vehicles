@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CO2 Prediction </title>
+    <style>
+        @import url('../static/style.css');
+
+    </style>
+</head>
+<body>
+    <section class="main">
+    <div class="nav">
+        <h1><a href="/">Prediction of CO2 Emission in Vehicles</a></h1>
+    </div>
+ <div class="main-container">
+ <div class="model">
+ <h1>Model</h1>
+ <br>
+ <div class="form">
+ <form action="/predict" method="post">
+ <div class="mg mg1">
+ <div class="group">
+ <label>Select the Brand</label><br>
+ <select name="make" id="brand" required>
+ <option value="0">Acura</option>
+ <option value="1" selected>Audi</option>
+ <option value="2">BMW</option>
+ <option value="3">BUICK</option>
+ <option value="4">Cardillac</option>
+ <option value="5">Chevorlet</option>
+ <option value="6">Chrysler</option>
+ <option value="7">Daewoo</option>
+ <option value="8">Dodge</option>
+ <option value="9">Ford</option>
+ <option value="10">GMC</option>
+ <option value="11">Honda</option>
+ <option value="12">Hyundai</option>
+ <option value="13">Infiniti</option>
+ <option value="14">Isuzu</option>
+ <option value="15">Jaguar</option>
+ <option value="16">Jeep</option>
+ <option value="17">Kia</option>
+ <option value="18">Lexus</option>
+ <option value="19">Lincoln</option>
+ <option value="20">Mazda</option>
+ <option value="21">Merceds Benz</option>
+ <option value="22">Nissan</option>
+ <option value="23">Oldsmobile</option>
+ <option value="24">Plymouth</option>
+ <option value="25">Pontiac</option>
+ <option value="26">Porsche</option>
+ <option value="27">Saab</option>
+ <option value="28">Saturn</option>
+ <option value="29">Subaru</option>
+ <option value="30">Suzuki</option>
+ <option value="31">Toyata</option>
+ <option value="32">Volkswagan</option>
+ <option value="33">Volvo</option>
+ </select>
+ </div><br>&nbsp;&nbsp;&nbsp;
+ <div class="group">
+ <label>Select the Vehicle Class</label>
+ <br>
+ <select name="vehicles_class" required>
+ <option value="0">COMPACT</option>
+ <option value="2">MID-SIZE</option>
+ <option value="3">MINICOMPACT</option>
+ <option value="4">MINIVAN</option>
+ <option value="5">PICKUP TRUCK - SMALL</option>
+ <option value="6">PICKUP TRUCK - STANDARD</option>
+ <option value="7">STATION WAGON - MID-SIZE</option>
+ <option value="8">STATION WAGON - SMALL</option>
+ <option value="9">SUBCOMPACT</option>
+ <option value="10">SUV</option>
+ <option value="11">TWO-SEATER</option>
+ <option value="12">VAN - CARGO</option>
+ <option value="13">VAN - PASSENGER</option>
+ </select>
+ </div><br>&nbsp;&nbsp;&nbsp;
+ <div class="group">
+ <label>Enter the Enginee Size </label><br>
+ <input type="text" placeholder="Ex: 2.3" name="engine_size" required>
+ </div>
+ </div>
+ <br>
+ <div class="mg mg2">
+ <div class="group">
+ <label>Enter the No of Cylinders</label><br>
+ <input type="number" placeholder="Ex:5 " name="Cylinders"
+min="1" required>
+ </div>
+ <br>&nbsp;&nbsp;&nbsp;
+ <div class="group">
+ <label>Transmission</label><br>
+ <select name="transmission" required>
+ <option value="0">Automatic ("A4","A5","A3")</option>
+ <option value="1">Automatic with Select Shift("AS4","AS5")</option>
+ <option value="2">Continuously Variable ("AV")</option>
+ <option value="3">Manual ("M5","M6")</option>
+ </select>
+ </div>
+ <br>&nbsp;&nbsp;&nbsp;
+ <div class="group">
+ <label>Select the Fuel Type</label><br>
+ <select name="fuel_type" required>
+ <option value="0">D - Diesel</option>
+ <option value="1">E - Ethanol(E85)</option>
+ <option value="2">N - Natural Gas</option>
+ <option value="3">Z - Premium Petrol</option>
+ <option value="4">X - Regular Petrol</option>
+ </select>
+ </div>
+ </div>
+ <br>
+ <div class="mg mg3">
+ <div class="group">
+ <label>Fuel Consumption in City</label><br>
+ <input type="text" name="fuel_consumption_city"
+placeholder="Ex:9.3" required>
+ </div>
+ <br>
+ <div class="group">
+ <label>Fuel Consumption on Highways</label><br>
+ <input type="text" name="fuel_consumption_hwy"
+placeholder="Ex:7.2" required>
+ </div>
+ </div>
+ <br>
+ <div class="submit">
+ <input type="submit" value="Predict">
+ </div>
+ </form>
+ <br><br>
+ </div>
+ <br>
+ </div>
+ </div>
+ </div>
+ </section>
+</body>
+</html>

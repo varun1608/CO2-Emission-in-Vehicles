@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Prediction</title>
+ <style>
+
+ @import
+url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap');
+ *{
+ padding: 0;
+ margin: 0;
+ box-sizing: border-box;
+ }
+ body{
+ font-family: 'Barlow Condensed', sans-serif;
+
+ }
+ .main {
+ height: 100vh;
+ width: 100vw;
+ }
+ .main .nav{
+ background: #000;
+ color: white;
+ padding: 1rem;
+ }
+ .main .outer {
+ height: 90vh;
+ width: 100vw;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ }
+a{
+ text-decoration: none;
+ color: white;
+}
+ </style>
+</head>
+<body>
+ <section class="main">
+ <div class="nav">
+ <h2><a href="/">Prediction of CO2 Emission in Vehicles</a></h2>
+ </div>
+ <div class="outer">
+ <div class="inner">
+ <div class="res">
+ <h1 id="demo1"></h1>
+ <h1 id="demo2"></h1>
+ <h1 id="demo3"></h1><br>
+ <h1>
+ The Emitted CO2 Amount is {{x}}
+ </h1>
+ <h1> Threshold value is : 256.22867853</h1>
+ <h1 id="demo"></h1>
+ </div>
+ </div>
+ </div>
+ </section>
+<script>
+ var a={{x}};
+ var th=256.22867853;
+ if(Number(a)>=th){
+ document.getElementById("demo").innerHTML="Your vehicle will be siezed because CO2 emission from your vehicle is greater than THRESHOLD VALUE.";
+ document.getElementById("demo").style.color='red';
+ }
+ else{
+ document.getElementById("demo").innerHTML="Your vehicle CO2 emission is in the limit. drive safe!!!";
+ document.getElementById("demo").style.color='green';
+ }
+
+l=['0','1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','32','33']
+
+l1=['Acura','Audi','Bmw','Buick','Cardillac','Chevorlet','Chrysler','Daewoo','Dodge','Ford','Gmc','Honda','Hyundai','Infiniti','Isuzu','Jaguar','Jeep','Kia','Lexus','Lincoln','Mazda','MercedsBenz','Nissan','Oldsmobile','Plymouth','Pontiac','Porsche','Saab','Saturn','Subaru','Suzuki','Toyoto','Volkawagan','Volvo']
+ for(var i=0;i<l.length;i++){
+ if({{j}}==l[i]){
+ document.getElementById("demo1").innerHTML="Car brand : "+l1[i];
+ }
+ }
+ l2=['0','2','3','4','5','6','7','8','9','10','11','12','13']
+ l3=['COMPACT','MID-SIZE','MINICOMPACT','MINIVAN','PICKUP TRUCK - SMALL','PICKUP TRUCK - STANDARD','STATION WAGON - MIDSIZE','STATION WAGON - SMALL','SUBCOMPACT','SUV','TWO-SEATER','VAN - CARGO','VAN - PASSENGER']
+ for(var i=0;i<l2.length;i++){
+ if({{k}}==l2[i]){
+ document.getElementById("demo2").innerHTML="Vehicle Class : "+l3[i];
+ }
+ }
+ l4=['0','1','2','3','4']
+ l5=['D - Diesel','E - Ethanol(E85)','N - Natural Gas','Z - Premium Petrol','X -Regular Petrol']
+ for(var i=0;i<l4.length;i++){
+ if({{o}}==l4[i]){
+ document.getElementById("demo3").innerHTML="Fuel Type : "+l5[i];
+ }
+ }
+</script>
+</body>
+</html>
